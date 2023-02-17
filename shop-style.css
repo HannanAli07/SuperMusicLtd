@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Signika+Negative:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*Navbar*/
+.navbar{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+}
+#bar{
+    font-size: 2rem;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 500;
+    transition: 0.3s ease;
+    color: rgb(0, 0, 0);
+}
+#bar:hover{
+    color: rgb(241, 8, 8);
+}
+
+.navbar-light .navbar-nav .nav-item {
+    padding: 0 20px;
+    color: rgb(247, 247, 247);
+    transition: 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-item::after{
+    content: '';
+    width: 0%;
+    height: 5px;
+    background: rgb(241, 8, 8);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar-light .navbar-nav .nav-item:hover:after{
+    width: 100%;
+}
+.navbar-light .navbar-nav .nav-item .nav-link{
+    color: rgb(246, 246, 246);
+}
+
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item .nav-link.active{
+    color: rgb(241, 8, 8);
+}
+
+/*Cart icon*/
+#cart-icon{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: rgb(13, 13, 13);
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.5s;
+}
+.cart.active{
+    right: 0;
+}
+.cart-title{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: bisque;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 2rem;
+    text-decoration: underline;
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+    outline-style: double;
+}
+
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+.cart-product-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: blanchedalmond;
+    margin-top: 10px;
+}
+
+.cart-price{
+    font-weight: 500;
+    color: blanchedalmond;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cart-quantity{
+    border: 3px solid black;
+    outline-color: rgb(16, 16, 16);
+    width: 2.7rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.cart-quantity:hover{
+    color: blue;
+}
+
+.cart-remove{
+    font-size: 30px;
+    color: rgb(252, 0, 0);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.cart-remove:hover{
+    color: white;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 2px solid blanchedalmond;
+}
+
+.total-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blanchedalmond;
+    text-decoration: underline;
+}
+
+.total-price{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 1rem;
+    color: blanchedalmond;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.btn-buy{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: 20%;
+    background: rgb(226, 2, 2);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: 'Abril Fatface', cursive;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.btn-buy:hover{
+    background: darkmagenta;
+    color: aquamarine;
+}
+
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#close-cart:hover{
+    color: darkred;
+}
+
+/*Body section*/
+
+button{
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    background-color: rgb(0, 0, 0); 
+    color: rgb(228, 41, 12);
+    padding: 13px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease
+}
+.text-container button{
+    text-decoration: none;
+    padding: 12px;
+    border: 5px solid black;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.container hr{
+    width: 80px;
+    height: 10px;
+    background-color: rgb(3, 3, 3);
+    font-weight: 800;
+}
+.container h3{
+    font-weight: 900;
+    color: brown;
+}
+.container p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+/*Products*/
+
+.product{
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.product h5{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.product h4{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.product img{
+    transition: 0.3s all;
+    border: 50%;
+}
+.product:hover img{
+    opacity: 0.5;
+}
+
+.product .add-cart{
+    background: rgb(14, 68, 125);
+    transform: translate(20px);
+    opacity: 0;
+    transition: 0.5s all;
+    outline: none;
+    color: rgb(55, 239, 9);
+}
+.product:hover .add-cart {
+    transform: translate(0);
+    opacity: 1;
+}
+.product .add-cart:hover{
+    color: aliceblue;
+    background: red;
+}
+
+.star{
+    padding: 10px 0;
+}
+
+.star i{
+    font-size: 0.8rem;
+    color: goldenrod; 
+}
+
+
+
+
+
+
+/*footer*/
+footer{
+    background-color: black;
+}
+footer h4{
+    text-decoration: underline;
+    color: white;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+}
+footer h6{
+    color: white;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+footer li{
+    padding-bottom: 4px;
+}
+footer li a{
+    font-size: 0.8rem;
+    color: antiquewhite;
+}
+footer li a:hover{
+    font-size: 0.8rem;
+    color: red;
+}
+footer p{
+    color: antiquewhite;
+    font-size: 0.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+footer .copyright a{
+    color: black;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    margin: 0 10px;
+    float: right;
+
+}
+footer .copyright a:hover{
+    color: #fff;
+    background-color: #fb774b;
+}
+
+
+
+@media (max-width:1080px){
+
+    .content {
+        width: 45%;
+    }
+}
+@media (max-width:1500px){
+    .content {
+        width: 100%;
+    }
+}
